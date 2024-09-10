@@ -30,7 +30,6 @@ FROM scratch
 
 WORKDIR /app/astria-indexer/
 
-COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=builder /go/bin/indexer /go/bin/indexer
 COPY configs/dipdup.yml ./
 COPY database database
